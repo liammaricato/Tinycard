@@ -1,5 +1,4 @@
-# Tinycard
- 
+![Tinycard_logo](https://github.com/liammaricato/Tinycard/blob/master/readme_images/Tinycard_logo.jpg)
 
 :scroll: An API that recreates a tiny part of the Wirecard company. This application was developed as part of Wirecard's selective process. :scroll:
 
@@ -8,7 +7,8 @@
 - [Technologies](#technologies)
 - [Getting Started](#getting-started)
   - [Running Tests](#running-tests)
-- [Available Routes](#available-routes)
+- [The Checkout and How to use the API](#the-checkout-and-how-to-use-the-api)
+  - [Available Routes](#available-routes)
 - [Useful Links](#useful-links)  
   
 ## Introduction
@@ -34,10 +34,10 @@ $ docker run -d -p 3333:3333 liammaricato/tinycard
 And you're already good to go!
 
 ## Running Tests
-To run the tests, just run the following command:
-```
-$ npm test
-```
+Work in progress.
+
+## The Checkout and How to use the API
+Here we have a [Postman Documentation](https://documenter.getpostman.com/view/9206585/SVzuc2hm) that describes and demonstrates how the API should be used.
 
 ## Available Routes 
 
@@ -49,7 +49,7 @@ $ npm test
 |/payments/:paymentid    | get payment status and info      | GET          |
 |/payments/:paymentid    | approve a certain payment        | PATCH        |
 
-[More details and examples can be found in the Postman documentation](https://documenter.getpostman.com/view/9206585/SVzuaM9E)
+[More details and examples can be found in the Postman documentation](https://documenter.getpostman.com/view/9206585/SVzuc2hm)
 
 ## Useful Links
 [Pattern for the emojis](https://gitmoji.carloscuesta.me/?fbclid=IwAR3JhM6m-s7l3XEYPN9vtlZwatGQvxhk8ETzHqbAg5pV5PCH8ajoxzORRQM)
