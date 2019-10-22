@@ -34,7 +34,18 @@ $ docker run -d -p 3333:3333 liammaricato/tinycard
 And you're already good to go!
 
 ## Running Tests
-Work in progress.
+In order to run the tests, you should already have everything downloaded in your machine. This means you should have **Node.js** installed and then clone the repository:
+```
+$ git clone https://github.com/liammaricato/Tinycard.git
+```
+Once that's done, enter the project's folder and run:
+```
+$ npm install
+```
+And now you're set! If you want to run the tests, just type in:
+```
+$ npm test
+```
 
 ## The Checkout and How to use the API
 Here we have a [Postman Documentation](https://documenter.getpostman.com/view/9206585/SVzuc2hm) that describes and demonstrates how the API should be used.
