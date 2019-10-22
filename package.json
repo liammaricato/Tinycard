@@ -1,0 +1,26 @@
+{
+  "name": "api_node",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "card-validator": "^6.2.0",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.7.5"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.3"
+  }
+}
