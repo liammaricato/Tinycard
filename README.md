@@ -7,10 +7,8 @@
 - [Introduction](#introduction)
 - [Technologies](#technologies)
 - [Getting Started](#getting-started)
-  - [Running Locally](#running-locally)
   - [Running Tests](#running-tests)
 - [Available Routes](#available-routes)
-- [All Tasks](#all-tasks)
 - [Useful Links](#useful-links)  
   
 ## Introduction
@@ -24,10 +22,22 @@ What was used:
 - **[Npm](https://www.npmjs.com/)** as a package manager.
 
 ## Getting Started
-
-## Running Locally
+To get started, you should have **Docker** installed.
+Then pull our project image from DockerHub:
+```
+$ docker pull liammaricato/tinycard
+```
+And run a new container on port 3333:
+```
+$ docker run -d -p 3333:3333 liammaricato/tinycard
+```
+And you're already good to go!
 
 ## Running Tests
+To run the tests, just run the following command:
+```
+$ npm test
+```
 
 ## Available Routes 
 
@@ -39,13 +49,7 @@ What was used:
 |/payments/:paymentid    | get payment status and info      | GET          |
 |/payments/:paymentid    | approve a certain payment        | PATCH        |
 
-[More details and examples can be found in the Postman documentation](https://documenter.getpostman.com/view/1994420/S1EQUJaE)
-
-## All Tasks
-
+[More details and examples can be found in the Postman documentation](https://documenter.getpostman.com/view/9206585/SVzuaM9E)
 
 ## Useful Links
-[Style guilde that was chosen to follow](https://github.com/i0natan/nodebestpractices/blob/master/README.brazilian-portuguese.md#1-pr%C3%A1ticas-de-estrutura-de-projeto)  
-[Linter used](https://github.com/pagarme/javascript-style-guide)  
-[Commit pattern used](https://gist.github.com/adeekshith/cd4c95a064977cdc6c50)  
 [Pattern for the emojis](https://gitmoji.carloscuesta.me/?fbclid=IwAR3JhM6m-s7l3XEYPN9vtlZwatGQvxhk8ETzHqbAg5pV5PCH8ajoxzORRQM)
