@@ -41,7 +41,13 @@ module.exports = {
             if (!validateCVV(card.cvv))
                 return res.status(400).json({ message: 'You have entered an invalid card CVV! Try typing just 3 or 4 numbers.'});
 
-            checkIfBuyerAndClientExists(buyer_id, client_id);
+            const buyer = await Buyer.findById(buyer_id);
+            if (!buyer)
+                return res.status(404).json({ message: 'Buyer not found!'});
+        
+            const client = await Client.findById(client_id);
+            if (!client)
+                return res.status(404).json({ message: 'Client not found!'});
             
             const payment = await Payment.create({
                 amount,
@@ -55,7 +61,13 @@ module.exports = {
             return res.status(201).json({ payment, message: 'Payment successful!' });
         }
         else {
-            checkIfBuyerAndClientExists(buyer_id, client_id);
+            const buyer = await Buyer.findById(buyer_id);
+            if (!buyer)
+                return res.status(404).json({ message: 'Buyer not found!'});
+
+            const client = await Client.findById(client_id);
+            if (!client)
+                return res.status(404).json({ message: 'Client not found!'});
          
             const payment = await Payment.create({
                 amount,
@@ -89,14 +101,4 @@ module.exports = {
     },
 
     generateBoleto
-};
-
-const checkIfBuyerAndClientExists = async (buyer_id, client_id) => {
-    const buyer = await Buyer.findById(buyer_id);
-    if (!buyer)
-        return res.status(404).json({ message: 'Buyer not found!'});
-
-    const client = await Client.findById(client_id);
-    if (!client)
-        return res.status(404).json({ message: 'Client not found!'});
 };
